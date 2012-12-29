@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Heart Attack</string>
+		<key>artist</key>
+		<string>Raphael Saadiq</string>
+		<key>fileName</key>
+		<string>01 Heart Attack.mp3</string>
+		<key>location</key>
+		<dict>
+			<key>placeName</key>
+			<string>Bastille</string>
+			<key>latitude</key>
+			<string>48.85322326468132</string>
+			<key>longitude</key>
+			<string>2.369077205657959</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>California Girls</string>
+		<key>artist</key>
+		<string>The Beach Boys</string>
+		<key>fileName</key>
+		<string>02 California Girls.mp3</string>
+		<key>location</key>
+		<dict>
+			<key>placeName</key>
+			<string>Palais royal</string>
+			<key>latitude</key>
+			<string>48.86289380365518</string>
+			<key>longitude</key>
+			<string>2.3360753059387207</string>
+		</dict>
+	</dict>
+</array>
+</plist>

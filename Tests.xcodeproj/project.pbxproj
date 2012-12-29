@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D119593168F4E3900CB8AF0 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D119592168F4E3900CB8AF0 /* AddressAnnotation.m */; };
 		6D831F9D1688881200BF234F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D831F9C1688881200BF234F /* UIKit.framework */; };
 		6D831F9F1688881200BF234F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D831F9E1688881200BF234F /* Foundation.framework */; };
 		6D831FA11688881200BF234F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D831FA01688881200BF234F /* CoreGraphics.framework */; };
@@ -16,16 +17,22 @@
 		6D831FAF1688881200BF234F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D831FAE1688881200BF234F /* Default.png */; };
 		6D831FB11688881200BF234F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D831FB01688881200BF234F /* Default@2x.png */; };
 		6D831FB31688881200BF234F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D831FB21688881200BF234F /* Default-568h@2x.png */; };
-		6D831FB61688881200BF234F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D831FB51688881200BF234F /* ViewController.m */; };
 		6D831FC216889AC600BF234F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D831FC116889AC600BF234F /* AVFoundation.framework */; };
 		6DC4D54E168DBAD500B966D4 /* 01 Heart Attack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DC4D54D168DBAD500B966D4 /* 01 Heart Attack.mp3 */; };
 		6DC4D550168DBBB200B966D4 /* 02 California Girls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DC4D54F168DBBB200B966D4 /* 02 California Girls.mp3 */; };
 		6DCEFDBB1688B77000F39AA5 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCEFDB91688B77000F39AA5 /* Pause.png */; };
 		6DCEFDBC1688B77000F39AA5 /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCEFDBA1688B77000F39AA5 /* Play.png */; };
 		6DD781321688D6F90090F462 /* logo-tests.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD781311688D6F90090F462 /* logo-tests.png */; };
+		6DFE4A5C168F10F600B39013 /* Sounds-List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE4A5B168F10F600B39013 /* Sounds-List.plist */; };
+		6DFE4A6B168F316800B39013 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4A6A168F316800B39013 /* DetailViewController.m */; };
+		6DFE4A71168F37BF00B39013 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFE4A70168F37BF00B39013 /* MapKit.framework */; };
+		6DFE4A73168F37C500B39013 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFE4A72168F37C500B39013 /* CoreLocation.framework */; };
+		6DFE4A7A168F4D1A00B39013 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4A79168F4D1A00B39013 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D119591168F4E3900CB8AF0 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
+		6D119592168F4E3900CB8AF0 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 		6D831F981688881200BF234F /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D831F9C1688881200BF234F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D831F9E1688881200BF234F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,14 +46,19 @@
 		6D831FAE1688881200BF234F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6D831FB01688881200BF234F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6D831FB21688881200BF234F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6D831FB41688881200BF234F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6D831FB51688881200BF234F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6D831FC116889AC600BF234F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6DC4D54D168DBAD500B966D4 /* 01 Heart Attack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 Heart Attack.mp3"; sourceTree = "<group>"; };
 		6DC4D54F168DBBB200B966D4 /* 02 California Girls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02 California Girls.mp3"; sourceTree = "<group>"; };
 		6DCEFDB91688B77000F39AA5 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pause.png; path = ../../../../../../Desktop/Pause.png; sourceTree = "<group>"; };
 		6DCEFDBA1688B77000F39AA5 /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Play.png; path = ../../../../../../Desktop/Play.png; sourceTree = "<group>"; };
 		6DD781311688D6F90090F462 /* logo-tests.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-tests.png"; sourceTree = "<group>"; };
+		6DFE4A5B168F10F600B39013 /* Sounds-List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sounds-List.plist"; sourceTree = "<group>"; };
+		6DFE4A69168F316800B39013 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6DFE4A6A168F316800B39013 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		6DFE4A70168F37BF00B39013 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6DFE4A72168F37C500B39013 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6DFE4A78168F4D1A00B39013 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6DFE4A79168F4D1A00B39013 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFE4A73168F37C500B39013 /* CoreLocation.framework in Frameworks */,
+				6DFE4A71168F37BF00B39013 /* MapKit.framework in Frameworks */,
 				6D831FC216889AC600BF234F /* AVFoundation.framework in Frameworks */,
 				6D831F9D1688881200BF234F /* UIKit.framework in Frameworks */,
 				6D831F9F1688881200BF234F /* Foundation.framework in Frameworks */,
@@ -64,9 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D119599168F51C900CB8AF0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6D119591168F4E3900CB8AF0 /* AddressAnnotation.h */,
+				6D119592168F4E3900CB8AF0 /* AddressAnnotation.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6D11959A168F51E200CB8AF0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DFE4A69168F316800B39013 /* DetailViewController.h */,
+				6DFE4A6A168F316800B39013 /* DetailViewController.m */,
+				6DFE4A78168F4D1A00B39013 /* MainViewController.h */,
+				6DFE4A79168F4D1A00B39013 /* MainViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		6D831F8D1688881200BF234F = {
 			isa = PBXGroup;
 			children = (
+				6DFE4A72168F37C500B39013 /* CoreLocation.framework */,
+				6DFE4A70168F37BF00B39013 /* MapKit.framework */,
 				6DD781311688D6F90090F462 /* logo-tests.png */,
 				6D831FC116889AC600BF234F /* AVFoundation.framework */,
 				6D831FA21688881200BF234F /* Tests */,
@@ -96,14 +132,11 @@
 		6D831FA21688881200BF234F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6DC4D54D168DBAD500B966D4 /* 01 Heart Attack.mp3 */,
-				6DC4D54F168DBBB200B966D4 /* 02 California Girls.mp3 */,
 				6D831FAB1688881200BF234F /* AppDelegate.h */,
 				6D831FAC1688881200BF234F /* AppDelegate.m */,
-				6D831FB41688881200BF234F /* ViewController.h */,
-				6D831FB51688881200BF234F /* ViewController.m */,
-				6DCEFDB91688B77000F39AA5 /* Pause.png */,
-				6DCEFDBA1688B77000F39AA5 /* Play.png */,
+				6DFE4A5D168F137100B39013 /* assets */,
+				6D119599168F51C900CB8AF0 /* Classes */,
+				6D11959A168F51E200CB8AF0 /* ViewControllers */,
 				6D831FA31688881200BF234F /* Supporting Files */,
 			);
 			path = Tests;
@@ -119,8 +152,36 @@
 				6D831FAE1688881200BF234F /* Default.png */,
 				6D831FB01688881200BF234F /* Default@2x.png */,
 				6D831FB21688881200BF234F /* Default-568h@2x.png */,
+				6DFE4A5B168F10F600B39013 /* Sounds-List.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DFE4A5D168F137100B39013 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				6DFE4A60168F138F00B39013 /* images */,
+				6DFE4A5F168F138600B39013 /* sounds */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		6DFE4A5F168F138600B39013 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6DC4D54D168DBAD500B966D4 /* 01 Heart Attack.mp3 */,
+				6DC4D54F168DBBB200B966D4 /* 02 California Girls.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		6DFE4A60168F138F00B39013 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6DCEFDB91688B77000F39AA5 /* Pause.png */,
+				6DCEFDBA1688B77000F39AA5 /* Play.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +244,7 @@
 				6DD781321688D6F90090F462 /* logo-tests.png in Resources */,
 				6DC4D54E168DBAD500B966D4 /* 01 Heart Attack.mp3 in Resources */,
 				6DC4D550168DBBB200B966D4 /* 02 California Girls.mp3 in Resources */,
+				6DFE4A5C168F10F600B39013 /* Sounds-List.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +257,9 @@
 			files = (
 				6D831FA91688881200BF234F /* main.m in Sources */,
 				6D831FAD1688881200BF234F /* AppDelegate.m in Sources */,
-				6D831FB61688881200BF234F /* ViewController.m in Sources */,
+				6DFE4A6B168F316800B39013 /* DetailViewController.m in Sources */,
+				6DFE4A7A168F4D1A00B39013 /* MainViewController.m in Sources */,
+				6D119593168F4E3900CB8AF0 /* AddressAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

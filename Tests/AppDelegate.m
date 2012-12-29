@@ -8,20 +8,24 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Init main view
+    self.viewController = [[MainViewController alloc] init];
+
+    // Wrap into nav controller
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
-    // Init main view
-    self.viewController = [[ViewController alloc] init];
-    self.window.rootViewController = self.viewController;
-
     return YES;
 }
 
