@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "AddressAnnotation.h"
 
-@interface MyMapViewController : UIViewController
+@interface MyMapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *plistArray;
 @property (strong, nonatomic) CLLocationManager *locationManager;
