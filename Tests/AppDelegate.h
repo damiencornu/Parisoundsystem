@@ -8,13 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@class MainViewController;
+@class SoundsListViewController;
+@class MyMapViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) MainViewController *viewController;
-@property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) NSMutableArray *plistArray;
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) UINavigationController *soundsNavController;
+@property (strong, nonatomic) SoundsListViewController *soundsViewController;
+
+@property (strong, nonatomic) MyMapViewController *mapViewController;
 
 @end

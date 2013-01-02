@@ -15,6 +15,7 @@
 }
 
 @property (strong, nonatomic) NSString *myTitle;
+@property (strong, nonatomic) NSString *mySubtitle;
 - (id) init:(CLLocationCoordinate2D) c;
 
 @end

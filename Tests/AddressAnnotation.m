@@ -12,7 +12,7 @@
 @synthesize coordinate;
 
 - (NSString *)subtitle{
-	return nil;
+	return self.mySubtitle;
 }
 
 - (NSString *)title{

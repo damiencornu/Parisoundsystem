@@ -8,22 +8,35 @@
 
 #import "AppDelegate.h"
 
-#import "MainViewController.h"
+#import "SoundsListViewController.h"
+#import "MyMapViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Init main view
-    self.viewController = [[MainViewController alloc] init];
+    // Init datas
+    self.plistArray = [[NSMutableArray alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/Sounds-List.plist", [[NSBundle mainBundle] resourcePath]]];
 
+    // Init main views
+    self.soundsViewController = [[SoundsListViewController alloc] init];
+    self.soundsViewController.plistArray = self.plistArray;
+    self.mapViewController = [[MyMapViewController alloc] init];
+    self.mapViewController.title = @"Map";
+    self.mapViewController.plistArray = self.plistArray;
+    
     // Wrap into nav controller
-    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.soundsNavController = [[UINavigationController alloc] initWithRootViewController:self.soundsViewController];
+    self.soundsNavController.title = @"Sounds";
+    
+    // Put it in a TabBar controlleer
+    self.tabBarController = [[UITabBarController alloc] init];
+    [self.tabBarController setViewControllers:@[self.mapViewController, self.soundsNavController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = self.navController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
     return YES;
