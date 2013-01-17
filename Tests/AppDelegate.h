@@ -15,12 +15,18 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
 @property (strong, nonatomic) NSMutableArray *plistArray;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
-@property (strong, nonatomic) UINavigationController *soundsNavController;
-@property (strong, nonatomic) SoundsListViewController *soundsViewController;
 
+@property (strong, nonatomic) UINavigationController *mapNavController;
+@property (strong, nonatomic) UINavigationController *soundsNavController;
+@property (strong, nonatomic) UINavigationController *aboutNavController;
+
+@property (retain, nonatomic) UIViewController *leftViewController;
+@property (retain, nonatomic) UIViewController *aboutViewController;
+@property (strong, nonatomic) SoundsListViewController *soundsViewController;
 @property (strong, nonatomic) MyMapViewController *mapViewController;
 
 @end
