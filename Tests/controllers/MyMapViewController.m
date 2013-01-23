@@ -7,7 +7,8 @@
 //
 
 #import "MyMapViewController.h"
-#import "MapBox/MapBox.h"
+#import "UIColor+MBWPExtensions.h"
+#import "DetailViewController.h"
 
 @interface MyMapViewController ()
 
@@ -37,55 +38,47 @@
     // Initialize Arrays
     self.soundPlayers = [NSMutableArray new];
     
-    RMMapBoxSource *onlineSource = [[RMMapBoxSource alloc] initWithMapID:@"dcornu.map-7644joxj"];
+    NSString *onlineSource = @"jadelombard.map-b5wjq6ss";
     
-    RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:onlineSource];
+    self.mapView = [[RMMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.tileSource = [[RMMapBoxSource alloc] initWithMapID:onlineSource];
     
     CLLocationCoordinate2D zoomLocation;
 //    PARIS
     zoomLocation.latitude= 48.85788229770377;
     zoomLocation.longitude= 2.352275848388672;
-//    CHEZ MOI
-//    zoomLocation.latitude= 48.79637641453768;
-//    zoomLocation.longitude= 2.476816177368164;
 
-    mapView.centerCoordinate = zoomLocation;
-    mapView.zoom = 12;
+    self.mapView.centerCoordinate = zoomLocation;
+    self.mapView.zoom = 12;
     
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
-    [self.view addSubview:mapView];
-//    self.map.showsUserLocation = YES;
-//
-//    self.locationManager = [[CLLocationManager alloc] init];
-//    self.locationManager.delegate = self;
-//    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-//    [self.locationManager startUpdatingLocation];
-//    
-//    
-//    for(NSDictionary* infos in self.plistArray) {
-//        // Adding annotations
-//        CLLocationCoordinate2D coordinates;
-//        coordinates.latitude = [infos[@"location"][@"latitude"] doubleValue];
-//        coordinates.longitude = [infos[@"location"][@"longitude"] doubleValue];
-//        AddressAnnotation *addAnnotation = [[AddressAnnotation alloc] init:coordinates];
-//        addAnnotation.myTitle = infos[@"location"][@"placeName"];
-//        addAnnotation.mySubtitle = infos[@"title"];
-//        [self.map addAnnotation:addAnnotation];
-//        
-//        // Locations Array
-//        
-//        // Soundsplayers Array
-//        NSURL *soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], infos[@"fileName"]]];
-//        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-//        [self.soundPlayers addObject:audioPlayer];        
-//    }
-//
-//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(zoomLocation, 1500, 1500);
-//    
-//    [self.map setRegion:region animated:YES];
-//    
-//    [self.view addSubview:self.map];
+    [self.view addSubview:self.mapView];
+    [self.view addSubview:self.mapView];
+    
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
+    
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 48.85322326468132;
+    coordinate.longitude = 2.3691844940185547;
+    
+    for(NSDictionary* point in self.plistArray) {
+        NSLog(@"Iitializing %@", [point objectForKey:@"title"]);
+        
+        RMAnnotation *annotation = [[RMAnnotation alloc]initWithMapView:self.mapView coordinate:CLLocationCoordinate2DMake([point[@"location"][@"latitude"] doubleValue], [point[@"location"][@"longitude"] doubleValue]) andTitle:point[@"location"][@"placeName"]];
+        annotation.annotationIcon = [UIImage imageNamed:@"map-pin.png"];
+        annotation.anchorPoint = CGPointMake(0.5, 1.0);
+        annotation.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                               point, @"point",
+                               nil];
+        [self.mapView addAnnotation:annotation];
+
+        // Soundsplayers Array
+        //        NSURL *soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], infos[@"fileName"]]];
+        //        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+        //        [self.soundPlayers addObject:audioPlayer];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,31 +87,52 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    NSUInteger index;
-    for(NSDictionary* infos in self.plistArray) {
-        index = [self.plistArray indexOfObject:infos];
-        CLLocation *infoLoc = [[CLLocation alloc] initWithLatitude:[infos[@"location"][@"latitude"] doubleValue] longitude:[infos[@"location"][@"longitude"] doubleValue]];
-        CLLocationDistance distance = [infoLoc distanceFromLocation:newLocation];
-
-        if(DEBUGGERINTERFACE) {
-            UILabel *label = [self.distanceLabels objectAtIndex:index];
-            NSLog([NSString stringWithFormat:@"Distance %u: %.1f meters", index+1, distance]);
-            label.text = [NSString stringWithFormat:@"Distance %u: %.1f meters", index+1, distance];
-        }
-        // Start / Stop playing a sound
-        AVAudioPlayer *currentPlayer = [self.soundPlayers objectAtIndex:index];
-        BOOL isPlaying = currentPlayer.isPlaying;
-        NSLog(@"%f & %c", distance, isPlaying);
-        if (distance <= 50 && !isPlaying) {
-            [currentPlayer play];
-            NSLog(@"play now!");
-        } else if (distance > 50 && isPlaying) {
-            [currentPlayer stop];
-            NSLog(@"Stop now!");
-        }
-        NSLog(@"object at index %d : %@ is %f meters away", index, infos[@"title"], distance);
+- (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation {
+    NSLog(@"Real pin");
+    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"map-pin.png"] anchorPoint: CGPointMake(0.5, 1.0)];
+    if (annotation.isUserLocationAnnotation){
+        [marker replaceUIImage:[UIImage imageNamed:@"user-location-pin.png"]];
+        NSLog(@"User's location pin");
     }
+
+    marker.canShowCallout = YES;
+    
+    marker.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    return marker;
 }
+
+- (void)tapOnCalloutAccessoryControl:(UIControl *)control forAnnotation:(RMAnnotation *)annotation onMap:(RMMapView *)map
+{
+    DetailViewController *detailController = [[DetailViewController alloc] init];
+    
+    detailController.infos       = [annotation.userInfo objectForKey:@"point"];
+//    detailController.detailDescription = [annotation.userInfo objectForKey:@"description"];
+    
+    [self.navigationController pushViewController:detailController animated:YES];
+}
+
+//
+//- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+//    NSUInteger index;
+//    for(NSDictionary* infos in self.plistArray) {
+//        index = [self.plistArray indexOfObject:infos];
+//        CLLocation *infoLoc = [[CLLocation alloc] initWithLatitude:[infos[@"location"][@"latitude"] doubleValue] longitude:[infos[@"location"][@"longitude"] doubleValue]];
+//        CLLocationDistance distance = [infoLoc distanceFromLocation:newLocation];
+//
+//        // Start / Stop playing a sound
+//        AVAudioPlayer *currentPlayer = [self.soundPlayers objectAtIndex:index];
+//        BOOL isPlaying = currentPlayer.isPlaying;
+//        NSLog(@"%f & %c", distance, isPlaying);
+//        if (distance <= 50 && !isPlaying) {
+//            [currentPlayer play];
+//            NSLog(@"play now!");
+//        } else if (distance > 50 && isPlaying) {
+//            [currentPlayer stop];
+//            NSLog(@"Stop now!");
+//        }
+//        NSLog(@"object at index %d : %@ is %f meters away", index, infos[@"title"], distance);
+//    }
+//}
 
 @end

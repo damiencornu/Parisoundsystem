@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "AddressAnnotation.h"
+#import "MapBox/MapBox.h"
 
-@interface MyMapViewController : UIViewController <CLLocationManagerDelegate, AVAudioPlayerDelegate>
+@interface MyMapViewController : UIViewController <RMMapViewDelegate, AVAudioPlayerDelegate>
 
+@property (strong) IBOutlet RMMapView *mapView;
 @property (strong, nonatomic) NSMutableArray *plistArray;
 @property (strong, nonatomic) NSMutableArray *soundPlayers;
 @property (strong, nonatomic) CLLocationManager *locationManager;

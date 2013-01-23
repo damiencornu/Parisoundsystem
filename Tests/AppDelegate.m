@@ -37,10 +37,13 @@
     
     // Wrap into nav controller
     self.aboutNavController = [[UINavigationController alloc] initWithRootViewController:self.aboutViewController];
+    self.aboutNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
     self.aboutViewController.title = @"About";
     self.mapNavController = [[UINavigationController alloc] initWithRootViewController:self.mapViewController];
+    self.mapNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
     self.mapNavController.title = @"Map";
     self.soundsNavController = [[UINavigationController alloc] initWithRootViewController:self.soundsViewController];
+    self.soundsNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
     self.soundsNavController.title = @"Sounds";
     
     // Put it in a TabBar controlleer

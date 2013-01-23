@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddressAnnotation.h"
+#import "MapBox/MapBox.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <RMMapViewDelegate>
 
+@property (strong) IBOutlet RMMapView *mapView;
 @property (strong, nonatomic) NSDictionary *infos;
 //@property (strong, nonatomic) CLLocationManager *locationManager;
+
 
 @end
