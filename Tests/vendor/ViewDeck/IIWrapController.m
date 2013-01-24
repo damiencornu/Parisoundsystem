@@ -10,7 +10,7 @@
 //  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
 //  of the Software, and to permit persons to whom the Software is furnished to do
 //  so, subject to the following conditions:
-// 
+//
 //  The above copyright notice and this permission notice shall be included in all
 //  copies or substantial portions of the Software.
 //
@@ -46,7 +46,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-@interface UIViewController (WrappedItem_Internal) 
+@interface UIViewController (WrappedItem_Internal)
 
 // internal setter for the wrapController property on UIViewController
 - (void)setWrapController:(IIWrapController*)wrapController;
@@ -70,13 +70,13 @@
         _wrappedController = controller;
         [controller setWrapController:self];
     }
-          
+    
     return self;
 }
 
 - (CGFloat)statusBarHeight {
-    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation) 
-    ? [UIApplication sharedApplication].statusBarFrame.size.width 
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+    ? [UIApplication sharedApplication].statusBarFrame.size.width
     : [UIApplication sharedApplication].statusBarFrame.size.height;
 }
 
@@ -86,19 +86,19 @@
     self.view.autoresizingMask = _wrappedController.view.autoresizingMask;
     _wrappedController.view.frame = self.view.bounds;
     _wrappedController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+    
     if ([self respondsToSelector:@selector(addChildViewController:)])
         [self addChildViewController:self.wrappedController];
     [self.view addSubview:self.wrappedController.view];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     if ([_wrappedController respondsToSelector:@selector(didMoveToParentViewController:)])
         [_wrappedController didMoveToParentViewController:self];
-
+    
     if (self.onViewDidLoad)
         self.onViewDidLoad(self);
 }
@@ -117,10 +117,10 @@
     [_wrappedController setWrapController:nil];
     if ([_wrappedController respondsToSelector:@selector(didMoveToParentViewController:)])
         [_wrappedController didMoveToParentViewController:nil];
-
+    
     _wrappedController = nil;
     II_RELEASE(_wrappedController);
-
+    
 #if !II_ARC_ENABLED
     [super dealloc];
 #endif
@@ -145,36 +145,36 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.onViewWillAppear) 
+    if (self.onViewWillAppear)
         self.onViewWillAppear(self, animated);
-
+    
     [self.wrappedController viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (self.onViewDidAppear) 
+    if (self.onViewDidAppear)
         self.onViewDidAppear(self, animated);
-
+    
     [_wrappedController viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    if (self.onViewWillDisappear) 
+    if (self.onViewWillDisappear)
         self.onViewWillDisappear(self, animated);
-
+    
     [_wrappedController viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    if (self.onViewDidDisappear) 
+    if (self.onViewDidDisappear)
         self.onViewDidDisappear(self, animated);
-
+    
     [_wrappedController viewDidDisappear:animated];
 }
 
@@ -244,7 +244,7 @@
 
 @end
 
-@implementation UIViewController (WrapControllerItem) 
+@implementation UIViewController (WrapControllerItem)
 
 @dynamic wrapController;
 
@@ -256,7 +256,7 @@ static const char* wrapControllerKey = "WrapController";
 
 - (IIWrapController*)wrapController {
     id result = [self wrapController_core];
-    if (!result && self.navigationController) 
+    if (!result && self.navigationController)
         return [self.navigationController wrapController];
     
     return result;
