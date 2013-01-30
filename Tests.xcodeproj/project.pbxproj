@@ -21,7 +21,6 @@
 		6D1D358B16A7F8A6008EFFAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D1D358A16A7F8A6008EFFAB /* Default.png */; };
 		6D1D358D16A7F8AF008EFFAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D1D358C16A7F8AF008EFFAB /* Default@2x.png */; };
 		6D1D358F16A7F8B3008EFFAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D1D358E16A7F8B3008EFFAB /* Default-568h@2x.png */; };
-		6D1D359B16A80D48008EFFAB /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1D359A16A80D48008EFFAB /* MapBox.framework */; };
 		6D1D359D16A80F4C008EFFAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1D359C16A80F4C008EFFAB /* libsqlite3.dylib */; };
 		6D1D359F16A80F57008EFFAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1D359E16A80F57008EFFAB /* libz.dylib */; };
 		6D57EF9C16B0617C00B1067F /* map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D57EF9A16B0617C00B1067F /* map-pin.png */; };
@@ -33,6 +32,7 @@
 		6D831FA91688881200BF234F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D831FA81688881200BF234F /* main.m */; };
 		6D831FAD1688881200BF234F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D831FAC1688881200BF234F /* AppDelegate.m */; };
 		6D831FC216889AC600BF234F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D831FC116889AC600BF234F /* AVFoundation.framework */; };
+		6D9A8AE616B92C4600F9A5B9 /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9A8AE516B92C4600F9A5B9 /* MapBox.framework */; };
 		6DAB00EF16A8370400235CC3 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB00ED16A8370400235CC3 /* Pause.png */; };
 		6DAB00F016A8370400235CC3 /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB00EE16A8370400235CC3 /* Play.png */; };
 		6DAB00FD16A9CBDB00235CC3 /* UIColor+MBWPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB00FC16A9CBDB00235CC3 /* UIColor+MBWPExtensions.m */; };
@@ -66,7 +66,6 @@
 		6D1D358A16A7F8A6008EFFAB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		6D1D358C16A7F8AF008EFFAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		6D1D358E16A7F8B3008EFFAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		6D1D359A16A80D48008EFFAB /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
 		6D1D359C16A80F4C008EFFAB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6D1D359E16A80F57008EFFAB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6D57EF9A16B0617C00B1067F /* map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-pin.png"; path = "assets/images/map-pin.png"; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		6D831FAB1688881200BF234F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6D831FAC1688881200BF234F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6D831FC116889AC600BF234F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6D9A8AE516B92C4600F9A5B9 /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapBox.framework; path = Tests/vendor/MapBox.framework; sourceTree = "<group>"; };
 		6DAB00ED16A8370400235CC3 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pause.png; path = assets/images/Pause.png; sourceTree = "<group>"; };
 		6DAB00EE16A8370400235CC3 /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Play.png; path = assets/images/Play.png; sourceTree = "<group>"; };
 		6DAB00FB16A9CBDB00235CC3 /* UIColor+MBWPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MBWPExtensions.h"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				6D831F9D1688881200BF234F /* UIKit.framework in Frameworks */,
 				6D831F9F1688881200BF234F /* Foundation.framework in Frameworks */,
 				6D831FA11688881200BF234F /* CoreGraphics.framework in Frameworks */,
-				6D1D359B16A80D48008EFFAB /* MapBox.framework in Frameworks */,
+				6D9A8AE616B92C4600F9A5B9 /* MapBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +175,9 @@
 		6D831F9B1688881200BF234F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D9A8AE516B92C4600F9A5B9 /* MapBox.framework */,
 				6D1D359E16A80F57008EFFAB /* libz.dylib */,
 				6D1D359C16A80F4C008EFFAB /* libsqlite3.dylib */,
-				6D1D359A16A80D48008EFFAB /* MapBox.framework */,
 				6DC0184516A6AF2D00C282B0 /* QuartzCore.framework */,
 				6DFE4A72168F37C500B39013 /* CoreLocation.framework */,
 				6DFE4A70168F37BF00B39013 /* MapKit.framework */,
@@ -413,6 +413,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Tests/vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
@@ -429,6 +430,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Tests/vendor\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
