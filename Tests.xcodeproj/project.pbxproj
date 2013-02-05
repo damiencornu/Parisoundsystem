@@ -36,6 +36,8 @@
 		6DAB00EF16A8370400235CC3 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB00ED16A8370400235CC3 /* Pause.png */; };
 		6DAB00F016A8370400235CC3 /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DAB00EE16A8370400235CC3 /* Play.png */; };
 		6DAB00FD16A9CBDB00235CC3 /* UIColor+MBWPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB00FC16A9CBDB00235CC3 /* UIColor+MBWPExtensions.m */; };
+		6DAD61BD16B965C9002D272C /* laura_metro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD61BB16B965C9002D272C /* laura_metro.mp3 */; };
+		6DAD61BE16B965C9002D272C /* valentin_garage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD61BC16B965C9002D272C /* valentin_garage.mp3 */; };
 		6DC0184616A6AF2D00C282B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC0184516A6AF2D00C282B0 /* QuartzCore.framework */; };
 		6DD781321688D6F90090F462 /* logo-tests.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD781311688D6F90090F462 /* logo-tests.png */; };
 		6DFE4A5C168F10F600B39013 /* Sounds-List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE4A5B168F10F600B39013 /* Sounds-List.plist */; };
@@ -86,6 +88,8 @@
 		6DAB00EE16A8370400235CC3 /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Play.png; path = assets/images/Play.png; sourceTree = "<group>"; };
 		6DAB00FB16A9CBDB00235CC3 /* UIColor+MBWPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MBWPExtensions.h"; sourceTree = "<group>"; };
 		6DAB00FC16A9CBDB00235CC3 /* UIColor+MBWPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MBWPExtensions.m"; sourceTree = "<group>"; };
+		6DAD61BB16B965C9002D272C /* laura_metro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = laura_metro.mp3; path = assets/sounds/laura_metro.mp3; sourceTree = "<group>"; };
+		6DAD61BC16B965C9002D272C /* valentin_garage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = valentin_garage.mp3; path = assets/sounds/valentin_garage.mp3; sourceTree = "<group>"; };
 		6DC0184516A6AF2D00C282B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6DD781311688D6F90090F462 /* logo-tests.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-tests.png"; sourceTree = "<group>"; };
 		6DFE4A5B168F10F600B39013 /* Sounds-List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sounds-List.plist"; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		6DFE4A5F168F138600B39013 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				6DAD61BB16B965C9002D272C /* laura_metro.mp3 */,
+				6DAD61BC16B965C9002D272C /* valentin_garage.mp3 */,
 				6D1D358016A7F853008EFFAB /* 01 Heart Attack.mp3 */,
 				6D1D358116A7F853008EFFAB /* 02 California Girls.mp3 */,
 			);
@@ -318,6 +324,8 @@
 				6DAB00F016A8370400235CC3 /* Play.png in Resources */,
 				6D57EF9C16B0617C00B1067F /* map-pin.png in Resources */,
 				6D57EF9D16B0617C00B1067F /* user-location-pin.png in Resources */,
+				6DAD61BD16B965C9002D272C /* laura_metro.mp3 in Resources */,
+				6DAD61BE16B965C9002D272C /* valentin_garage.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

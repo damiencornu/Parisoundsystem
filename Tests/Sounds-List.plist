@@ -4,11 +4,11 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Heart Attack</string>
+		<string>Garage</string>
 		<key>artist</key>
-		<string>Raphael Saadiq</string>
+		<string>Valentin</string>
 		<key>fileName</key>
-		<string>01 Heart Attack.mp3</string>
+		<string>valentin_garage.mp3</string>
 		<key>location</key>
 		<dict>
 			<key>placeName</key>
@@ -21,11 +21,11 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>California Girls</string>
+		<string>Metro</string>
 		<key>artist</key>
-		<string>The Beach Boys</string>
+		<string>Laura</string>
 		<key>fileName</key>
-		<string>02 California Girls.mp3</string>
+		<string>laura_metro.mp3</string>
 		<key>location</key>
 		<dict>
 			<key>placeName</key>
