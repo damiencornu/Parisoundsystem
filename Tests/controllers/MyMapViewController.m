@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
     
+    self.nowPlayingToggled = NO;
+    
     // Set AudioSession to play even if the app runs in background
     // Geoloc also must be updated so it can have an interest.
     [[AVAudioSession sharedInstance] setDelegate: self];
@@ -40,7 +42,8 @@
     
     NSString *onlineSource = @"jadelombard.map-b5wjq6ss";
     
-    self.mapView = [[RMMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView = [[RMMapView alloc] init];
+    self.mapView.frame = CGRectMake(0, 49, self.view.frame.size.width, self.view.frame.size.height - 49);
     self.mapView.tileSource = [[RMMapBoxSource alloc] initWithMapID:onlineSource];
     
     CLLocationCoordinate2D zoomLocation;
@@ -79,6 +82,23 @@
         //        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
         //        [self.soundPlayers addObject:audioPlayer];
     }
+    
+    self.soundsPlayingPannel = [[UIView alloc] initWithFrame:CGRectMake(0, -151, self.view.frame.size.width, 200)];
+    self.soundsPlayingPannel.backgroundColor = [UIColor colorWithRed:0.157 green:0.914 blue:0.859 alpha:1];
+    [self.view addSubview:self.soundsPlayingPannel];
+    UILabel *labelNowPlaying = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, self.view.frame.size.width - 20, 32)];
+    labelNowPlaying.backgroundColor = [UIColor clearColor];
+    [labelNowPlaying setFont:[UIFont fontWithName:@"Executive-55Reg" size:24]];
+    labelNowPlaying.text = @"now playing";
+    [self.soundsPlayingPannel addSubview:labelNowPlaying];
+    
+    self.logo = [[UIButton alloc] init];
+    self.logo.frame = CGRectMake(0, 0, self.view.frame.size.width, 49);
+    [self.logo setImage:[UIImage imageNamed:@"logo.jpg"] forState:UIControlStateNormal];
+    [self.logo setImage:[UIImage imageNamed:@"logo-active.jpg"] forState:UIControlStateSelected];
+    [self.view addSubview:self.logo];
+    [self.logo addTarget:self action:@selector(toggleNowPlaying:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,10 +126,35 @@
 {
     DetailViewController *detailController = [[DetailViewController alloc] init];
     
-    detailController.infos       = [annotation.userInfo objectForKey:@"point"];
+    detailController.infos = [annotation.userInfo objectForKey:@"point"];
 //    detailController.detailDescription = [annotation.userInfo objectForKey:@"description"];
     
     [self.navigationController pushViewController:detailController animated:YES];
+}
+
+- (void) toggleNowPlaying:(UIButton*) sender {
+    NSLog(@"Toggle now playing");
+    CGRect soundsPlayingPannelFrame = self.soundsPlayingPannel.frame;
+    if(self.nowPlayingToggled){
+        NSLog(@"On range le panneau \"now playing\"");
+        self.nowPlayingToggled = NO;
+        [self.logo setSelected:NO];
+        soundsPlayingPannelFrame.origin.y = -151;
+    } else {
+        NSLog(@"On sort le panneau \"now playing\"");
+        soundsPlayingPannelFrame.origin.y = 49;
+        self.nowPlayingToggled = YES;
+        [self.logo setSelected:YES];
+    }
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         self.soundsPlayingPannel.frame = soundsPlayingPannelFrame;
+                     }
+                     completion:^(BOOL finished){
+                         NSLog(@"Animation Done!");
+                     }];
 }
 
 //

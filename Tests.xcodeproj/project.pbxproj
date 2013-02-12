@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D1D356B16A7F804008EFFAB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D356616A7F804008EFFAB /* IISideController.m */; };
-		6D1D356C16A7F804008EFFAB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D356816A7F804008EFFAB /* IIViewDeckController.m */; };
-		6D1D356D16A7F804008EFFAB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D356A16A7F804008EFFAB /* IIWrapController.m */; };
-		6D1D357816A7F825008EFFAB /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D356F16A7F825008EFFAB /* AboutViewController.m */; };
 		6D1D357916A7F825008EFFAB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D357116A7F825008EFFAB /* DetailViewController.m */; };
-		6D1D357A16A7F825008EFFAB /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D357316A7F825008EFFAB /* LeftViewController.m */; };
 		6D1D357B16A7F825008EFFAB /* MyMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D357516A7F825008EFFAB /* MyMapViewController.m */; };
 		6D1D357C16A7F825008EFFAB /* SoundsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D357716A7F825008EFFAB /* SoundsListViewController.m */; };
 		6D1D357F16A7F83E008EFFAB /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D357E16A7F83E008EFFAB /* AddressAnnotation.m */; };
@@ -39,24 +34,22 @@
 		6DAD61BD16B965C9002D272C /* laura_metro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD61BB16B965C9002D272C /* laura_metro.mp3 */; };
 		6DAD61BE16B965C9002D272C /* valentin_garage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6DAD61BC16B965C9002D272C /* valentin_garage.mp3 */; };
 		6DC0184616A6AF2D00C282B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC0184516A6AF2D00C282B0 /* QuartzCore.framework */; };
+		6DC3F8AB16C2A32600CADF15 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC3F8AA16C2A32600CADF15 /* logo.png */; };
+		6DCA820416C26F6E00574284 /* Executive-55Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DCA820316C26F6E00574284 /* Executive-55Regular.ttf */; };
 		6DD781321688D6F90090F462 /* logo-tests.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD781311688D6F90090F462 /* logo-tests.png */; };
+		6DDAE2AF16C1BE860072A373 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2AE16C1BE860072A373 /* logo.jpg */; };
+		6DDAE2B116C1C3210072A373 /* btn-back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2B016C1C3210072A373 /* btn-back.jpg */; };
+		6DDAE2B416C1D0180072A373 /* tab-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2B216C1D0180072A373 /* tab-map.png */; };
+		6DDAE2B516C1D0180072A373 /* tab-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2B316C1D0180072A373 /* tab-search.png */; };
+		6DDAE2B716C1D0220072A373 /* logo-active.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2B616C1D0220072A373 /* logo-active.jpg */; };
+		6DDAE2B916C1E0DF0072A373 /* map-pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAE2B816C1E0DF0072A373 /* map-pin@2x.png */; };
 		6DFE4A5C168F10F600B39013 /* Sounds-List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DFE4A5B168F10F600B39013 /* Sounds-List.plist */; };
 		6DFE4A73168F37C500B39013 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFE4A72168F37C500B39013 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D1D356516A7F804008EFFAB /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IISideController.h; path = vendor/ViewDeck/IISideController.h; sourceTree = "<group>"; };
-		6D1D356616A7F804008EFFAB /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IISideController.m; path = vendor/ViewDeck/IISideController.m; sourceTree = "<group>"; };
-		6D1D356716A7F804008EFFAB /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIViewDeckController.h; path = vendor/ViewDeck/IIViewDeckController.h; sourceTree = "<group>"; };
-		6D1D356816A7F804008EFFAB /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIViewDeckController.m; path = vendor/ViewDeck/IIViewDeckController.m; sourceTree = "<group>"; };
-		6D1D356916A7F804008EFFAB /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIWrapController.h; path = vendor/ViewDeck/IIWrapController.h; sourceTree = "<group>"; };
-		6D1D356A16A7F804008EFFAB /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIWrapController.m; path = vendor/ViewDeck/IIWrapController.m; sourceTree = "<group>"; };
-		6D1D356E16A7F825008EFFAB /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = controllers/AboutViewController.h; sourceTree = "<group>"; };
-		6D1D356F16A7F825008EFFAB /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = controllers/AboutViewController.m; sourceTree = "<group>"; };
 		6D1D357016A7F825008EFFAB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = controllers/DetailViewController.h; sourceTree = "<group>"; };
 		6D1D357116A7F825008EFFAB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = controllers/DetailViewController.m; sourceTree = "<group>"; };
-		6D1D357216A7F825008EFFAB /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftViewController.h; path = controllers/LeftViewController.h; sourceTree = "<group>"; };
-		6D1D357316A7F825008EFFAB /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftViewController.m; path = controllers/LeftViewController.m; sourceTree = "<group>"; };
 		6D1D357416A7F825008EFFAB /* MyMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMapViewController.h; path = controllers/MyMapViewController.h; sourceTree = "<group>"; };
 		6D1D357516A7F825008EFFAB /* MyMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMapViewController.m; path = controllers/MyMapViewController.m; sourceTree = "<group>"; };
 		6D1D357616A7F825008EFFAB /* SoundsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundsListViewController.h; path = controllers/SoundsListViewController.h; sourceTree = "<group>"; };
@@ -91,7 +84,15 @@
 		6DAD61BB16B965C9002D272C /* laura_metro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = laura_metro.mp3; path = assets/sounds/laura_metro.mp3; sourceTree = "<group>"; };
 		6DAD61BC16B965C9002D272C /* valentin_garage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = valentin_garage.mp3; path = assets/sounds/valentin_garage.mp3; sourceTree = "<group>"; };
 		6DC0184516A6AF2D00C282B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6DC3F8AA16C2A32600CADF15 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		6DCA820316C26F6E00574284 /* Executive-55Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Executive-55Regular.ttf"; path = "assets/fonts/Executive-55Regular.ttf"; sourceTree = "<group>"; };
 		6DD781311688D6F90090F462 /* logo-tests.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-tests.png"; sourceTree = "<group>"; };
+		6DDAE2AE16C1BE860072A373 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = assets/images/logo.jpg; sourceTree = "<group>"; };
+		6DDAE2B016C1C3210072A373 /* btn-back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "btn-back.jpg"; path = "assets/images/btn-back.jpg"; sourceTree = "<group>"; };
+		6DDAE2B216C1D0180072A373 /* tab-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-map.png"; path = "assets/images/tab-map.png"; sourceTree = "<group>"; };
+		6DDAE2B316C1D0180072A373 /* tab-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-search.png"; path = "assets/images/tab-search.png"; sourceTree = "<group>"; };
+		6DDAE2B616C1D0220072A373 /* logo-active.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "logo-active.jpg"; path = "assets/images/logo-active.jpg"; sourceTree = "<group>"; };
+		6DDAE2B816C1E0DF0072A373 /* map-pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-pin@2x.png"; path = "assets/images/map-pin@2x.png"; sourceTree = "<group>"; };
 		6DFE4A5B168F10F600B39013 /* Sounds-List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sounds-List.plist"; sourceTree = "<group>"; };
 		6DFE4A70168F37BF00B39013 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6DFE4A72168F37C500B39013 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -131,12 +132,8 @@
 		6D11959A168F51E200CB8AF0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D1D356E16A7F825008EFFAB /* AboutViewController.h */,
-				6D1D356F16A7F825008EFFAB /* AboutViewController.m */,
 				6D1D357016A7F825008EFFAB /* DetailViewController.h */,
 				6D1D357116A7F825008EFFAB /* DetailViewController.m */,
-				6D1D357216A7F825008EFFAB /* LeftViewController.h */,
-				6D1D357316A7F825008EFFAB /* LeftViewController.m */,
 				6D1D357416A7F825008EFFAB /* MyMapViewController.h */,
 				6D1D357516A7F825008EFFAB /* MyMapViewController.m */,
 				6D1D357616A7F825008EFFAB /* SoundsListViewController.h */,
@@ -145,22 +142,10 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		6D1D356416A7F7F4008EFFAB /* ViewDeck */ = {
-			isa = PBXGroup;
-			children = (
-				6D1D356516A7F804008EFFAB /* IISideController.h */,
-				6D1D356616A7F804008EFFAB /* IISideController.m */,
-				6D1D356716A7F804008EFFAB /* IIViewDeckController.h */,
-				6D1D356816A7F804008EFFAB /* IIViewDeckController.m */,
-				6D1D356916A7F804008EFFAB /* IIWrapController.h */,
-				6D1D356A16A7F804008EFFAB /* IIWrapController.m */,
-			);
-			name = ViewDeck;
-			sourceTree = "<group>";
-		};
 		6D831F8D1688881200BF234F = {
 			isa = PBXGroup;
 			children = (
+				6DC3F8AA16C2A32600CADF15 /* logo.png */,
 				6DD781311688D6F90090F462 /* logo-tests.png */,
 				6D831FA21688881200BF234F /* Tests */,
 				6D831F9B1688881200BF234F /* Frameworks */,
@@ -222,14 +207,22 @@
 		6DC2247B16A6ADB600B94A94 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				6D1D356416A7F7F4008EFFAB /* ViewDeck */,
 			);
 			name = vendor;
+			sourceTree = "<group>";
+		};
+		6DCA820216C26F5F00574284 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DCA820316C26F6E00574284 /* Executive-55Regular.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		6DFE4A5D168F137100B39013 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				6DCA820216C26F5F00574284 /* fonts */,
 				6DFE4A60168F138F00B39013 /* images */,
 				6DFE4A5F168F138600B39013 /* sounds */,
 			);
@@ -250,6 +243,12 @@
 		6DFE4A60168F138F00B39013 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6DDAE2B816C1E0DF0072A373 /* map-pin@2x.png */,
+				6DDAE2B616C1D0220072A373 /* logo-active.jpg */,
+				6DDAE2B216C1D0180072A373 /* tab-map.png */,
+				6DDAE2B316C1D0180072A373 /* tab-search.png */,
+				6DDAE2B016C1C3210072A373 /* btn-back.jpg */,
+				6DDAE2AE16C1BE860072A373 /* logo.jpg */,
 				6D57EF9A16B0617C00B1067F /* map-pin.png */,
 				6D57EF9B16B0617C00B1067F /* user-location-pin.png */,
 				6DAB00ED16A8370400235CC3 /* Pause.png */,
@@ -326,6 +325,14 @@
 				6D57EF9D16B0617C00B1067F /* user-location-pin.png in Resources */,
 				6DAD61BD16B965C9002D272C /* laura_metro.mp3 in Resources */,
 				6DAD61BE16B965C9002D272C /* valentin_garage.mp3 in Resources */,
+				6DDAE2AF16C1BE860072A373 /* logo.jpg in Resources */,
+				6DDAE2B116C1C3210072A373 /* btn-back.jpg in Resources */,
+				6DDAE2B416C1D0180072A373 /* tab-map.png in Resources */,
+				6DDAE2B516C1D0180072A373 /* tab-search.png in Resources */,
+				6DDAE2B716C1D0220072A373 /* logo-active.jpg in Resources */,
+				6DDAE2B916C1E0DF0072A373 /* map-pin@2x.png in Resources */,
+				6DCA820416C26F6E00574284 /* Executive-55Regular.ttf in Resources */,
+				6DC3F8AB16C2A32600CADF15 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +345,7 @@
 			files = (
 				6D831FA91688881200BF234F /* main.m in Sources */,
 				6D831FAD1688881200BF234F /* AppDelegate.m in Sources */,
-				6D1D356B16A7F804008EFFAB /* IISideController.m in Sources */,
-				6D1D356C16A7F804008EFFAB /* IIViewDeckController.m in Sources */,
-				6D1D356D16A7F804008EFFAB /* IIWrapController.m in Sources */,
-				6D1D357816A7F825008EFFAB /* AboutViewController.m in Sources */,
 				6D1D357916A7F825008EFFAB /* DetailViewController.m in Sources */,
-				6D1D357A16A7F825008EFFAB /* LeftViewController.m in Sources */,
 				6D1D357B16A7F825008EFFAB /* MyMapViewController.m in Sources */,
 				6D1D357C16A7F825008EFFAB /* SoundsListViewController.m in Sources */,
 				6D1D357F16A7F83E008EFFAB /* AddressAnnotation.m in Sources */,

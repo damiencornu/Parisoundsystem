@@ -4,9 +4,44 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Garage</string>
+		<string>GAITÉ</string>
 		<key>artist</key>
-		<string>Valentin</string>
+		<dict>
+			<key>name</key>
+			<string>JEAN-PIERRE</string>
+			<key>twitter</key>
+			<string>example</string>
+			<key>facebook</key>
+			<string>example</string>
+			<key>website</key>
+			<string>http://www.example.com</string>
+		</dict>
+		<key>fileName</key>
+		<string>valentin_garage.mp3</string>
+		<key>location</key>
+		<dict>
+			<key>placeName</key>
+			<string>Gaité</string>
+			<key>latitude</key>
+			<string>48.866877945740384</string>
+			<key>longitude</key>
+			<string>2.353592813014984</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>GARAGE</string>
+		<key>artist</key>
+		<dict>
+			<key>name</key>
+			<string>VALENTIN</string>
+			<key>twitter</key>
+			<string>example</string>
+			<key>facebook</key>
+			<string>example</string>
+			<key>website</key>
+			<string>http://www.example.com</string>
+		</dict>
 		<key>fileName</key>
 		<string>valentin_garage.mp3</string>
 		<key>location</key>
@@ -21,9 +56,18 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Metro</string>
+		<string>METRO</string>
 		<key>artist</key>
-		<string>Laura</string>
+		<dict>
+			<key>name</key>
+			<string>LAURA</string>
+			<key>twitter</key>
+			<string>example</string>
+			<key>facebook</key>
+			<string>example</string>
+			<key>website</key>
+			<string>http://www.example.com</string>
+		</dict>
 		<key>fileName</key>
 		<string>laura_metro.mp3</string>
 		<key>location</key>

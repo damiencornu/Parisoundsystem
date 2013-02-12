@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) NSMutableArray *plistArray;
 
+@property (strong, nonatomic) UIImageView *logo;
+
 @end

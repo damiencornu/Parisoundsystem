@@ -17,6 +17,10 @@
 @property (strong, nonatomic) NSMutableArray *plistArray;
 @property (strong, nonatomic) NSMutableArray *soundPlayers;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) UIButton *logo;
+@property (assign, nonatomic) Boolean *nowPlayingToggled;
+@property (strong, nonatomic) UIView *soundsPlayingPannel;
+@property (strong, nonatomic) UITableView *soundsPlaying;
 
 @property (strong, nonatomic) NSMutableArray *distanceLabels;
 

@@ -10,56 +10,47 @@
 
 #import "SoundsListViewController.h"
 #import "MyMapViewController.h"
-#import "LeftViewController.h"
-#import "AboutViewController.h"
 #import "MyMapViewController.h"
-#import "IIViewDeckController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+//    for (NSString *familyName in [UIFont familyNames]) {
+//        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            NSLog(@"%@", fontName);
+//        }
+//    }
+
     // Init datas
     self.plistArray = [[NSMutableArray alloc] initWithContentsOfFile:[NSString stringWithFormat:@"%@/Sounds-List.plist", [[NSBundle mainBundle] resourcePath]]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
     // Init main views
-    self.leftViewController = [[LeftViewController alloc] init];
-    self.aboutViewController = [[AboutViewController alloc] init];
-    self.soundsViewController = [[SoundsListViewController alloc] init];
-    self.soundsViewController.plistArray = self.plistArray;
+    self.searchViewController = [[SoundsListViewController alloc] init];
+    self.searchViewController.plistArray = self.plistArray;
     self.mapViewController = [[MyMapViewController alloc] init];
     self.mapViewController.title = @"Map";
     self.mapViewController.plistArray = self.plistArray;
     
     // Wrap into nav controller
-    self.aboutNavController = [[UINavigationController alloc] initWithRootViewController:self.aboutViewController];
-    self.aboutNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
-    self.aboutViewController.title = @"About";
     self.mapNavController = [[UINavigationController alloc] initWithRootViewController:self.mapViewController];
-    self.mapNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
+    [self.mapNavController setNavigationBarHidden:YES];
+//    self.mapNavController.tabBarItem.image = [UIImage imageNamed:@"tab-map.png"];
     self.mapNavController.title = @"Map";
-    self.soundsNavController = [[UINavigationController alloc] initWithRootViewController:self.soundsViewController];
-    self.soundsNavController.navigationBar.tintColor = [UIColor colorWithRed:.7 green:.5 blue:.2 alpha:1];
-    self.soundsNavController.title = @"Sounds";
+    self.searchNavController = [[UINavigationController alloc] initWithRootViewController:self.searchViewController];
+    [self.searchNavController setNavigationBarHidden:YES];
+//    self.searchNavController.tabBarItem.image = [UIImage imageNamed:@"tab-search.png"];
+    self.searchNavController.title = @"Search";
     
     // Put it in a TabBar controlleer
     self.tabBarController = [[UITabBarController alloc] init];
-    [self.tabBarController setViewControllers:@[self.mapNavController, self.soundsNavController]];
+    [self.tabBarController setViewControllers:@[self.mapNavController, self.searchNavController]];
     
-    IIViewDeckController* deckController = [[IIViewDeckController alloc] initWithCenterViewController:self.tabBarController leftViewController:self.leftViewController];
-    
-    deckController.panningMode = IIViewDeckNoPanning;
-    
-    self.mapViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:deckController action:@selector(toggleLeftView)];
-    self.soundsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:deckController action:@selector(toggleLeftView)];
-    self.aboutViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:deckController action:@selector(toggleLeftView)];
-
-    
-    self.window.rootViewController = deckController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
     return YES;

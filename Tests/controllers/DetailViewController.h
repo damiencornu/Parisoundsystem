@@ -15,5 +15,10 @@
 @property (strong, nonatomic) NSDictionary *infos;
 //@property (strong, nonatomic) CLLocationManager *locationManager;
 
+@property (strong, nonatomic) UIButton *logo;
+@property (strong, nonatomic) UIButton *backButton;
+
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UILabel *artistLabel;
 
 @end

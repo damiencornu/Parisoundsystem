@@ -30,27 +30,8 @@
 	
     self.title = @"Sounds";
 
-//    NSURL *soundOneURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/01 Heart Attack.mp3", [[NSBundle mainBundle] resourcePath]]];
-//    
-//    NSError *error;
-//    audioPlayerOne = [[AVAudioPlayer alloc] initWithContentsOfURL:soundOneURL error:&error];
-//    if (audioPlayerOne == nil) {
-//        NSLog([error description]);
-//    } else {
-//        [audioPlayerOne play];
-//        [audioPlayerOne setDelegate:self];
-//        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
-//    }
-//    
-//    NSURL *soundTwoURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/02 California Girls.mp3", [[NSBundle mainBundle] resourcePath]]];
-//    
-//    audioPlayerTwo = [[AVAudioPlayer alloc] initWithContentsOfURL:soundTwoURL error:&error];
-//    if (audioPlayerTwo == nil) {
-//        NSLog([error description]);
-//    } else {
-//        [audioPlayerTwo play];
-//        [audioPlayerTwo setDelegate:self];
-//    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,7 +85,5 @@
     
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
-
-
 
 @end

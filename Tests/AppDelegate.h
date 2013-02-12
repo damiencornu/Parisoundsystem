@@ -21,12 +21,9 @@
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
 @property (strong, nonatomic) UINavigationController *mapNavController;
-@property (strong, nonatomic) UINavigationController *soundsNavController;
-@property (strong, nonatomic) UINavigationController *aboutNavController;
+@property (strong, nonatomic) UINavigationController *searchNavController;
 
-@property (retain, nonatomic) UIViewController *leftViewController;
-@property (retain, nonatomic) UIViewController *aboutViewController;
-@property (strong, nonatomic) SoundsListViewController *soundsViewController;
+@property (strong, nonatomic) SoundsListViewController *searchViewController;
 @property (strong, nonatomic) MyMapViewController *mapViewController;
 
 @end
