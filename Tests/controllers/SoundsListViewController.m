@@ -57,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog([NSString stringWithFormat:@"%d elements in plist", self.plistArray.count]);
+    NSLog(@"%d elements in plist", self.plistArray.count);
     return self.plistArray.count;
 }
 
