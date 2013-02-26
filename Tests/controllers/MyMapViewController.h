@@ -11,7 +11,7 @@
 #import "AddressAnnotation.h"
 #import "MapBox/MapBox.h"
 
-@interface MyMapViewController : UIViewController <RMMapViewDelegate, AVAudioPlayerDelegate>
+@interface MyMapViewController : UIViewController <CLLocationManagerDelegate, RMMapViewDelegate, AVAudioPlayerDelegate>
 
 @property (strong) IBOutlet RMMapView *mapView;
 @property (strong, nonatomic) NSMutableArray *plistArray;
@@ -20,7 +20,9 @@
 @property (strong, nonatomic) UIButton *logo;
 @property (assign, nonatomic) Boolean nowPlayingToggled;
 @property (strong, nonatomic) UIView *soundsPlayingPannel;
+
 @property (strong, nonatomic) UITableView *soundsPlaying;
+@property (strong, nonatomic) NSMutableArray *currentlyPlaying;
 
 @property (strong, nonatomic) NSMutableArray *distanceLabels;
 

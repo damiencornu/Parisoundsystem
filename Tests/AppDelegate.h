@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class SoundsListViewController;
 @class MyMapViewController;
@@ -25,5 +26,7 @@
 
 @property (strong, nonatomic) SoundsListViewController *searchViewController;
 @property (strong, nonatomic) MyMapViewController *mapViewController;
+
+@property (strong, nonatomic) CLLocation *userLocation;
 
 @end

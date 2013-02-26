@@ -21,7 +21,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>fr.damiencornu.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>fr.damiencornu.Parisoundsystem</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

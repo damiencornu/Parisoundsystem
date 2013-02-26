@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>id</key>
+		<integer>0</integer>
 		<key>title</key>
 		<string>GAITÉ</string>
 		<key>artist</key>
@@ -15,7 +17,15 @@
 			<string>example</string>
 			<key>website</key>
 			<string>http://www.example.com</string>
+			<key>about</key>
+			<string>Jean Pierre est né un 23 janvier 1984, et est aussitôt tombé dans la musique. Paris est pour lui une source d’inspiration illimitée, c’est pourquoi il a accepté de remixer la gaîté sans hésiter...</string>
 		</dict>
+		<key>about</key>
+		<string>Paris, 14ème arrondissement</string>
+		<key>date</key>
+		<string>01/02/2013</string>
+		<key>duration</key>
+		<string>2 min 30</string>
 		<key>fileName</key>
 		<string>valentin_garage.mp3</string>
 		<key>location</key>
@@ -29,6 +39,8 @@
 		</dict>
 	</dict>
 	<dict>
+		<key>id</key>
+		<integer>1</integer>
 		<key>title</key>
 		<string>GARAGE</string>
 		<key>artist</key>
@@ -42,6 +54,12 @@
 			<key>website</key>
 			<string>http://www.example.com</string>
 		</dict>
+		<key>date</key>
+		<string>23/01/2013</string>
+		<key>duration</key>
+		<string></string>
+		<key>about</key>
+		<string></string>
 		<key>fileName</key>
 		<string>valentin_garage.mp3</string>
 		<key>location</key>
@@ -55,6 +73,8 @@
 		</dict>
 	</dict>
 	<dict>
+		<key>id</key>
+		<integer>2</integer>
 		<key>title</key>
 		<string>METRO</string>
 		<key>artist</key>
@@ -68,6 +88,12 @@
 			<key>website</key>
 			<string>http://www.example.com</string>
 		</dict>
+		<key>date</key>
+		<string>22/12/2012</string>
+		<key>duration</key>
+		<string></string>
+		<key>about</key>
+		<string></string>
 		<key>fileName</key>
 		<string>laura_metro.mp3</string>
 		<key>location</key>
@@ -75,9 +101,9 @@
 			<key>placeName</key>
 			<string>Palais royal</string>
 			<key>latitude</key>
-			<string>48.863200830312294</string>
+			<string>48.85176193318182</string>
 			<key>longitude</key>
-			<string>2.3369765281677246</string>
+			<string>2.4204951524734497</string>
 		</dict>
 	</dict>
 </array>

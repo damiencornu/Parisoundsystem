@@ -36,15 +36,22 @@
     [[AVAudioSession sharedInstance] setDelegate: self];
     NSError *setCategoryError = nil;
     [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: &setCategoryError];
-    
+
     // Initialize Arrays
     self.soundPlayers = [NSMutableArray new];
+    self.currentlyPlaying = [NSMutableArray new];
     
     NSString *onlineSource = @"jadelombard.map-b5wjq6ss";
     
     self.mapView = [[RMMapView alloc] init];
     self.mapView.frame = CGRectMake(0, 49, self.view.frame.size.width, self.view.frame.size.height - 49);
     self.mapView.tileSource = [[RMMapBoxSource alloc] initWithMapID:onlineSource];
+    
+    // Initialize Location Manager
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self.locationManager startUpdatingLocation];
     
     CLLocationCoordinate2D zoomLocation;
 //    PARIS
@@ -76,11 +83,13 @@
                                point, @"point",
                                nil];
         [self.mapView addAnnotation:annotation];
+        
+        [self.currentlyPlaying addObject:point];
 
         // Soundsplayers Array
-        //        NSURL *soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], infos[@"fileName"]]];
-        //        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-        //        [self.soundPlayers addObject:audioPlayer];
+        NSURL *soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], point[@"fileName"]]];
+        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+        [self.soundPlayers addObject:audioPlayer];
     }
     
     self.soundsPlayingPannel = [[UIView alloc] initWithFrame:CGRectMake(0, -151, self.view.frame.size.width, 200)];
@@ -157,27 +166,34 @@
                      }];
 }
 
-//
-//- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-//    NSUInteger index;
-//    for(NSDictionary* infos in self.plistArray) {
-//        index = [self.plistArray indexOfObject:infos];
-//        CLLocation *infoLoc = [[CLLocation alloc] initWithLatitude:[infos[@"location"][@"latitude"] doubleValue] longitude:[infos[@"location"][@"longitude"] doubleValue]];
-//        CLLocationDistance distance = [infoLoc distanceFromLocation:newLocation];
-//
-//        // Start / Stop playing a sound
-//        AVAudioPlayer *currentPlayer = [self.soundPlayers objectAtIndex:index];
-//        BOOL isPlaying = currentPlayer.isPlaying;
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSUInteger index;
+    
+    SharedAppDelegate.userLocation = newLocation;
+    
+    for(NSDictionary* infos in self.plistArray) {
+        index = [self.plistArray indexOfObject:infos];
+        CLLocation *infoLoc = [[CLLocation alloc] initWithLatitude:[infos[@"location"][@"latitude"] doubleValue] longitude:[infos[@"location"][@"longitude"] doubleValue]];
+        CLLocationDistance distance = [infoLoc distanceFromLocation:newLocation];
+
+        // Start / Stop playing a sound
+        AVAudioPlayer *currentPlayer = [self.soundPlayers objectAtIndex:index];
+        BOOL isPlaying = currentPlayer.isPlaying;
 //        NSLog(@"%f & %c", distance, isPlaying);
-//        if (distance <= 50 && !isPlaying) {
-//            [currentPlayer play];
-//            NSLog(@"play now!");
-//        } else if (distance > 50 && isPlaying) {
-//            [currentPlayer stop];
-//            NSLog(@"Stop now!");
-//        }
+        if (distance <= 500 && !isPlaying) {
+            [currentPlayer play];
+            NSLog(@"play now!");
+        } else if (distance > 500 && isPlaying) {
+            [currentPlayer stop];
+            NSLog(@"Stop now!");
+        } if (isPlaying) {
+            float ratioDistance = 1 - distance / 500;
+            float volume = sqrtf(1 - (ratioDistance-1)*(ratioDistance-1));
+            [currentPlayer setVolume:volume];
+        }
 //        NSLog(@"object at index %d : %@ is %f meters away", index, infos[@"title"], distance);
-//    }
-//}
+    }
+}
 
 @end
